@@ -30,7 +30,11 @@
  */
 package org.moresbycoffee.spock.vending
 
+import org.hamcrest.BaseMatcher
+import org.hamcrest.Description
 import spock.lang.Specification
+import static org.hamcrest.Matchers.closeTo
+//import static org.hamcrest.Matchers.closeTo
 
 class VendingSpec extends Specification {
 
@@ -60,7 +64,7 @@ class VendingSpec extends Specification {
 //    def "vending machine should print ticket when the a product is selected and enough money in the machine"() {
 //        given: "a vending machine"
 //            def vendingMachine = new VendingMachine();
-//        and: "£10 in it"
+//        and: "ï¿½10 in it"
 //            vendingMachine.putMoney(10)
 //        when: "a Ten Ride product is selected"
 //            def ticket = vendingMachine.selectProduct("Ten Ride", 10)
@@ -75,7 +79,7 @@ class VendingSpec extends Specification {
  * JUnit solution: Parameterized test, Theories...
  */
 
-//    def "Vending machine should show £7 when £2 and £5 coins are put into it"() {
+//    def "Vending machine should show ï¿½7 when ï¿½2 and ï¿½5 coins are put into it"() {
 //        given:
 //            def vendingMachine = new VendingMachine()
 //        when:
@@ -90,7 +94,7 @@ class VendingSpec extends Specification {
 
 
     //Using where
-//    def "Vending machine should show £7 when £2 and £5 coins are put into it /where/"() {
+//    def "Vending machine should show ï¿½7 when ï¿½2 and ï¿½5 coins are put into it /where/"() {
 //        given:
 //            def vendingMachine = new VendingMachine()
 //        when:
@@ -126,7 +130,7 @@ class VendingSpec extends Specification {
 //    }
 
 //    @Unroll
-//    def "Vending machine should show £#result when #coins coins are put into it"() {
+//    def "Vending machine should show ï¿½#result when #coins coins are put into it"() {
 //        given:
 //            def vendingMachine = new VendingMachine()
 //        when:
@@ -144,7 +148,7 @@ class VendingSpec extends Specification {
 
     //Datatable
 //    @Unroll
-//    def "Vending machine should show £#result when #coins coins are put into it /datatable/"() {
+//    def "Vending machine should show ï¿½#result when #coins coins are put into it /datatable/"() {
 //        given:
 //            def vendingMachine = new VendingMachine()
 //        when:
@@ -227,6 +231,34 @@ class VendingSpec extends Specification {
 ////            1 * cashMachine./retu.*/(_)
 ////            1 * cashMachine._(_)
 //            ticket == null
+//    }
+
+//    def "vending machine should print out the selected ticket /matcher/"() {
+//        given:
+//            def printer = Mock(IPrinter)
+//            def cashMachine = Mock(ICashMachine)
+//            def vendingMachine = new VendingMachine(cashMachine, printer)
+//        and:
+//            vendingMachine.putMoney(14)
+//        when:
+//            def ticket = vendingMachine.selectProduct("Round trip", 12)
+//        then:
+//            1 * printer.printTicket(new Ticket("Round trip", 12))
+//            ticket isThatTicket(new Ticket("Round trip", 13))
+//    }
+
+
+    def isThatTicket(thatTicket) {
+        [
+                matches: { ticket -> ticket == thatTicket },
+                describeTo: { Description description -> description.appendText("Ticket is not matching") }
+        ] as BaseMatcher
+    }
+
+//    void "test closeTo"() {
+//        expect:
+//            1.9d closeTo(2.0, 0.2d)
+////            that 1.9d closeTo(2, 0.5)
 //    }
 
 

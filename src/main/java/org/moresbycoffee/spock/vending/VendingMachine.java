@@ -31,6 +31,7 @@
 package org.moresbycoffee.spock.vending;
 
 
+
 public class VendingMachine {
 
 //**** v0 ****//
@@ -122,6 +123,65 @@ public class VendingMachine {
 ////    public Ticket selectProduct(final String name, final int money) {
 ////        cashMachine.returnMoney(currentMoney - money);
 ////        return new Ticket(name, money);
+////    }
+
+
+//**** v6 ****//
+
+//    private final ICashMachine cashMachine;
+//    private final IPrinter printer;
+//
+//    public VendingMachine(final ICashMachine cashMachine, final IPrinter printer) {
+//        this.cashMachine = cashMachine;
+//        this.printer     = printer;
+//    }
+//
+//    public VendingMachine(final ICashMachine cashMachine) {
+//        this(cashMachine, new IPrinter() {
+//            @Override public void printTicket(final Ticket ticket) throws OutOfPaperException {
+//                System.out.println("Print: " + ticket);
+//            }
+//        });
+//    }
+//
+//    public VendingMachine() { this(new CashMachine()); }
+//
+//    private int currentMoney = 0;
+//
+//    public int putMoney(final int money) {
+//        if (money < 0) {
+//            throw new IllegalArgumentException();
+//        }
+//        currentMoney += money;
+//        return currentMoney;
+//    }
+//
+//    public Ticket selectProduct(final String name, final int money) {
+//        cashMachine.returnMoney(currentMoney - money);
+//        return new Ticket(name, money);
+//    }
+//
+////    public Ticket selectProduct(final String name, final int money) {
+////        final Ticket ticket = new Ticket(name, money);
+////        try {
+////            printer.printTicket(ticket);
+////        } catch (final OutOfPaperException e) {
+////            e.printStackTrace();
+////        }
+////        cashMachine.returnMoney(currentMoney - money);
+////        return ticket;
+////    }
+//
+////    public Ticket selectProduct(final String name, final int money) {
+////        final Ticket ticket = new Ticket(name, money);
+////        try {
+////            printer.printTicket(ticket);
+////            cashMachine.returnMoney(currentMoney - money);
+////            return ticket;
+////        } catch (final OutOfPaperException e) {
+////            cashMachine.returnMoney(currentMoney);
+////            return null;
+////        }
 ////    }
 
 }

@@ -179,4 +179,55 @@ class VendingSpec extends Specification {
 //            1 * cashMachine.returnMoney(5)
 //    }
 
+//**** v6 ****//
+
+    //Stubing
+//    def "vending machine should print out the selected ticket"() {
+//        given:
+//            def printer = Mock(IPrinter)
+//            def cashMachine = Mock(ICashMachine)
+//            def vendingMachine = new VendingMachine(cashMachine, printer)
+//        and:
+//            vendingMachine.putMoney(14)
+//        when:
+//            def ticket = vendingMachine.selectProduct("Round trip", 12)
+//        then:
+//            1 * printer.printTicket(new Ticket("Round trip", 12))
+//    }
+
+//    def "vending machine should return all the money if the printer is out of paper"() {
+//        given:
+//            def printer = Mock(IPrinter)
+//            def cashMachine = Mock(ICashMachine)
+//            def vendingMachine = new VendingMachine(cashMachine, printer)
+//        and:
+//            vendingMachine.putMoney(14)
+//        when:
+//            def ticket = vendingMachine.selectProduct("Round trip", 12)
+//        then:
+//            1 * printer.printTicket(new Ticket("Round trip", 12)) >> { throw new OutOfPaperException() }
+//            1 * cashMachine.returnMoney(14)
+//            ticket == null
+//    }
+
+
+
+//    def "bit assertion"() {
+//        given:
+//            def printer = Mock(IPrinter)
+//            def cashMachine = Mock(ICashMachine)
+//            def vendingMachine = new VendingMachine(cashMachine, printer)
+//        and:
+//            vendingMachine.putMoney(14)
+//        when:
+//            def ticket = vendingMachine.selectProduct("Round trip", 12)
+//        then:
+//            1 * printer.printTicket({ it.name == "Round trip" }) >> { throw new OutOfPaperException() }
+////            1 * cashMachine.returnMoney(_)
+////            1 * cashMachine./retu.*/(_)
+////            1 * cashMachine._(_)
+//            ticket == null
+//    }
+
+
 }

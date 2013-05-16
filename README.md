@@ -1,4 +1,4 @@
-Today I gave a presentation and demo at [Masabi](http://www.masabi.com/) about [Spock testing framework](http://code.google.com/p/spock/). I was inspired by <a href="http://www.devoxx.com/display/UK13/Robert+Fletcher">Rob Fletcher</a> to create this presentation but I changed his original vending machine demo with a much more simple one.
+I gave this presentation and demo at [Masabi](http://www.masabi.com/) about [Spock testing framework](http://code.google.com/p/spock/). I was inspired by [Rob Fletcher](http://www.devoxx.com/display/UK13/Robert+Fletcher) to create this presentation but I replaced his original vending machine demo with a much more simple one.
 
 The presentation is available on Prezi: [http://prezi.com/lflcqhidetjj/spock-framework/](http://prezi.com/lflcqhidetjj/spock-framework/)
 

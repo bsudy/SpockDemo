@@ -1,6 +1,6 @@
 Today I gave a presentation and demo at [Masabi](http://www.masabi.com/) about [Spock testing framework](http://code.google.com/p/spock/). I was inspired by <a href="http://www.devoxx.com/display/UK13/Robert+Fletcher">Rob Fletcher</a> to create this presentation but I changed his original vending machine demo with a much more simple one.
 
-<iframe src="http://prezi.com/embed/lflcqhidetjj/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="550" height="400" frameBorder="0"></iframe>
+The presentation is available on Prezi: [http://prezi.com/lflcqhidetjj/spock-framework/](http://prezi.com/lflcqhidetjj/spock-framework/)
 
 The code is available on GitHub: [https://github.com/bsudy/SpockDemo](https://github.com/bsudy/SpockDemo)
 
